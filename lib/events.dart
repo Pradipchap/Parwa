@@ -3,9 +3,7 @@ import 'package:projectparwa/eid.dart';
 import 'package:projectparwa/ganesh.dart';
 import 'package:projectparwa/jatra.dart';
 import 'package:projectparwa/shivaratri.dart';
-import '../main.dart';
-import '../hotels.dart';
-import '../calender.dart';
+
 
 class Events extends StatelessWidget {
   const Events({Key? key}) : super(key: key);
@@ -45,7 +43,7 @@ class Events extends StatelessWidget {
               borderRadius: BorderRadius.circular(20),
             ),
             child: const Center(
-            child: Text("Other Services" ,style: TextStyle(fontSize: 20), ),
+            child: Text("Upcoming Events" ,style: TextStyle(fontSize: 20), ),
            )
          ),
         ),
@@ -62,7 +60,7 @@ class Events extends StatelessWidget {
           },
            child: Container(
             decoration: const BoxDecoration(
-              color: Colors.grey,
+
 
                borderRadius: BorderRadius.all(Radius.circular(15)),
   ),
@@ -86,7 +84,7 @@ class Events extends StatelessWidget {
       decoration:const BoxDecoration(
         image: DecorationImage(
           image: AssetImage(
-              'images/events.png'),
+              'images/shiva.jpg'),
           fit: BoxFit.fill,
         ),
         shape: BoxShape.rectangle,
@@ -99,9 +97,11 @@ class Events extends StatelessWidget {
       width: 265,
 
       child: 
-     const Text(
-        'Shivartri',style: TextStyle(fontSize: 30),
-      ),
+    const Center(
+       child:  Text(
+          'Shivaratri',style: TextStyle(fontSize: 30),
+        ),
+     ),
       
 
     ),
@@ -137,7 +137,7 @@ class Events extends StatelessWidget {
           },
            child: Container(
             decoration: const BoxDecoration(
-              color: Colors.grey,
+
 
                borderRadius: BorderRadius.all(Radius.circular(15)),
   ),
@@ -161,7 +161,7 @@ class Events extends StatelessWidget {
       decoration:const BoxDecoration(
         image: DecorationImage(
           image: AssetImage(
-              'images/events.png'),
+              'images/ganesh.jpeg'),
           fit: BoxFit.fill,
         ),
         shape: BoxShape.rectangle,
@@ -210,7 +210,7 @@ class Events extends StatelessWidget {
           },
            child: Container(
             decoration: const BoxDecoration(
-              color: Colors.grey,
+
 
                borderRadius: BorderRadius.all(Radius.circular(15)),
   ),
@@ -234,7 +234,7 @@ class Events extends StatelessWidget {
       decoration:const BoxDecoration(
         image: DecorationImage(
           image: AssetImage(
-              'images/events.png'),
+              'images/jatra.jpg'),
           fit: BoxFit.fill,
         ),
         shape: BoxShape.rectangle,
@@ -284,7 +284,7 @@ class Events extends StatelessWidget {
           },
            child: Container(
             decoration: const BoxDecoration(
-              color: Colors.grey,
+
 
                borderRadius: BorderRadius.all(Radius.circular(15)),
   ),
@@ -308,7 +308,7 @@ class Events extends StatelessWidget {
       decoration:const BoxDecoration(
         image: DecorationImage(
           image: AssetImage(
-              'images/events.png'),
+              'images/eid.jpg'),
           fit: BoxFit.fill,
         ),
         shape: BoxShape.rectangle,
