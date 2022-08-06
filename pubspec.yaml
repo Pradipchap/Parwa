@@ -1,6 +1,6 @@
 name: projectparwa
 description: A new Flutter project.
-
+url_launcher: ^5.0.2
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
@@ -35,7 +35,8 @@ dependencies:
   latlng: ^0.2.0
   open_street_map_search_and_pick: ^0.0.9
   syncfusion_flutter_maps: ^20.2.40
-  google_fonts: ^2.1.0 
+  # google_fonts: ^2.1.0 
+  flutter_osm_plugin: ^0.37.2+2
   
 
 

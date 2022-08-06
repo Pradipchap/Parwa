@@ -1,14 +1,15 @@
-import 'package:projectparwa/shivaratri.dart';
-import 'package:google_fonts/google_fonts.dart';
+
+
 
 import './pujari.dart';
 import './calender.dart';
 import './events.dart';
 import './hotels.dart';
-import '../shivaratri.dart';
+
 import '../ganesh.dart';
-import '../jatra.dart';
+import 'firstjatra.dart';
 import '../eid.dart';
+import 'firstshiva.dart';
 
 import 'package:flutter/material.dart';
 
@@ -80,7 +81,7 @@ class PageTwo extends MaterialPageRoute {
           List<CardItem> items = [
             const CardItem(
               asimage: 'images/shiva.jpg',
-              link: Shivaratri(),
+              link: Firstshiva(),
               title: 'Shivaratri',
               subtitle: 'tomorrow',
             ),
@@ -92,7 +93,7 @@ class PageTwo extends MaterialPageRoute {
             ),
             const CardItem(
               asimage: 'images/jatra.jpg',
-              link: Jatra(),
+              link: Firstjatra(),
               title: 'jatra',
               subtitle: '2079/06/13',
             ),

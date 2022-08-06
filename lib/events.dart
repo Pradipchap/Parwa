@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:projectparwa/eid.dart';
 import 'package:projectparwa/ganesh.dart';
-import 'package:projectparwa/jatra.dart';
-import 'package:projectparwa/shivaratri.dart';
+import 'package:projectparwa/firstjatra.dart';
+import 'package:projectparwa/mainshivaratri.dart';
+import '../firstshiva.dart';
 
 
 class Events extends StatelessWidget {
@@ -55,7 +56,7 @@ class Events extends StatelessWidget {
 
             Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => const Shivaratri()),
+                MaterialPageRoute(builder: (context) => const Firstshiva()),
               );
           },
            child: Container(
@@ -205,7 +206,7 @@ class Events extends StatelessWidget {
 
             Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => const Jatra()),
+                MaterialPageRoute(builder: (context) => const Firstjatra()),
               );
           },
            child: Container(

@@ -1,10 +1,11 @@
+
 import 'package:flutter/material.dart';
 import 'package:flutter_map/plugin_api.dart';
 import 'package:latlong2/latlong.dart';
+import '../mainshivaratri.dart';
 
-
-class Jatra extends StatelessWidget {
-  const Jatra({Key? key}) : super(key: key);
+class Firstshiva extends StatelessWidget {
+  const Firstshiva({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -37,13 +38,20 @@ class Jatra extends StatelessWidget {
         fit: BoxFit.cover,
         ),
         ),
+        
+        
 
                   
-                   )
+                   ),
+                    
+                   
+
+                   
                   
 
   
                   ],
+                  
                 ),
                 
                 
@@ -70,7 +78,7 @@ class Jatra extends StatelessWidget {
              showDialog(context: context, builder:(context)=> AlertDialog(
                 
                 
-                title:const Text('Nyatpola',style: TextStyle(fontSize: 40),),
+                title:const Text('Nyatpola2',style: TextStyle(fontSize: 40),),
                 backgroundColor: Colors.lightBlueAccent,
                 content: Column(
                   children:  [
@@ -87,11 +95,15 @@ class Jatra extends StatelessWidget {
 
                   
                    )
+
+                 
+                   
                   
 
   
                   ],
                 ),
+                
                 
                 
               )
@@ -133,7 +145,24 @@ class Jatra extends StatelessWidget {
         ),
 
                   
-                   )
+                   ),
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const Shivaratri()),
+                      );
+                      },
+                      child: Container(
+                        height: 50,
+                        padding: const EdgeInsets.all(10),
+                        margin: const EdgeInsets.all(10),
+                        color: Colors.pink,
+                        child: 
+                      const Center(child:  Text('Get Directions')),
+                      ),
+                    ),
+
                   
 
   
@@ -164,7 +193,7 @@ class Jatra extends StatelessWidget {
               showDialog(context: context, builder:(context)=> AlertDialog(
                 
                 
-                title:const Text('Nyatpola',style: TextStyle(fontSize: 40),),
+                title:const Text('Nyatpola4',style: TextStyle(fontSize: 40),),
                 backgroundColor: Colors.lightBlueAccent,
                 content: Column(
                   children:  [
@@ -212,7 +241,7 @@ class Jatra extends StatelessWidget {
               showDialog(context: context, builder:(context)=> AlertDialog(
                 
                 
-                title:const Text('Nyatpola',style: TextStyle(fontSize: 40),),
+                title:const Text('Nyatpola5',style: TextStyle(fontSize: 40),),
                 backgroundColor: Colors.lightBlueAccent,
                 content: Column(
                   children:  [
@@ -257,7 +286,7 @@ class Jatra extends StatelessWidget {
               showDialog(context: context, builder:(context)=> AlertDialog(
                 
                 
-                title:const Text('Nyatpola',style: TextStyle(fontSize: 40),),
+                title:const Text('Nyatpola6',style: TextStyle(fontSize: 40),),
                 backgroundColor: Colors.lightBlueAccent,
                 content: Column(
                   children:  [
@@ -300,7 +329,7 @@ class Jatra extends StatelessWidget {
     return  Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        title:const Text('Ganesh Chaturthi'),
+        title:const Text('Shivaratri'),
       ),
 
 
@@ -321,7 +350,7 @@ class Jatra extends StatelessWidget {
             options: MapOptions(
               center: LatLng(27.7154,85.3123),
               
-              zoom: 13
+              zoom: 11
 
             ),
             layers: [TileLayerOptions(
