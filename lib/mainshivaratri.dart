@@ -13,6 +13,22 @@ import 'package:flutter/material.dart';
 import 'package:latlong2/latlong.dart';
 import 'package:flutter_osm_plugin/flutter_osm_plugin.dart';
 
+
+class CardItem {
+  final String asimage;
+  final String title;
+  
+
+  final String subtitle;
+
+  const CardItem({
+    required this.asimage,
+    required this.title,
+    
+    required this.subtitle,
+  });
+}
+
 class Shivaratri extends StatelessWidget {
   const Shivaratri({Key? key}) : super(key: key);
 
@@ -32,18 +48,34 @@ class Shivaratri extends StatelessWidget {
         west: 5.9559113,
       ),
     );
-    
+    List<CardItem> items = [
+            const CardItem(
+              asimage: 'images/hotel1.jpg',
+              
+              title: 'Rooftop Hotel',
+              subtitle: '⭐⭐   1.75 km',
+            ),
+            const CardItem(
+              asimage: 'images/veghotel.jpg',
+              
+              title: 'Vaishavi Sweets',
+              subtitle: '⭐⭐⭐⭐  2 km',
+            ),
+            const CardItem(
+              asimage: 'images/hotel2.jpg',
+             
+              title: 'White Monk hotel',
+              subtitle: '⭐⭐⭐⭐  2.3 km' ,
+            ),
+            const CardItem(
+              asimage: 'images/hotel3.jpeg',
+              
+              title: 'Kali Misthan',
+              subtitle: '⭐⭐⭐  2.2 km',
+            ),
+          ];
 
-    // marker = [
-    //   Marker(
-    //       width: 45,
-    //       height: 45,
-    //       point: LatLng(27.833, 85.311),
-    //       builder: (context) => Container(
-    //             child: IconButton(
-    //           )),
-    // ];
-
+   
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
@@ -53,7 +85,7 @@ class Shivaratri extends StatelessWidget {
         child: Column(
           children: [
             Container(
-              height: 500,
+              height: 450,
               margin: const EdgeInsets.all(10),
               child: OSMFlutter(
                 controller: mapController,
@@ -136,10 +168,85 @@ class Shivaratri extends StatelessWidget {
               //     ),
               //   ],
               // ),
-            )
+            ),
+            const Divider(),
+            
+            Container(
+              child: SizedBox(
+                      height: 300,
+                      child: SizedBox(
+                        height: 300,
+                        child: ListView.separated(
+                          padding: const EdgeInsets.all(20),
+                          scrollDirection: Axis.horizontal,
+                          itemCount: 4,
+                          separatorBuilder: (context, _) =>
+                              const SizedBox(width: 5),
+                          itemBuilder: (context, index) =>
+                              buildcard(items: items[index], context: context),
+                        ),
+                      ),
+                    ),
+            ),
+           
+              
+              
+              
+            
+             
+            
+            
+            
           ],
+          
         ),
+        
+
+        
       ),
     );
   }
 }
+buildcard({required CardItem items, context}) => SizedBox(
+      width: 230,
+      
+        child: Column(children: [
+          Expanded(
+              child: AspectRatio(
+            aspectRatio: 4 / 3,
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(20),
+              child: Material(
+                child: Ink.image(
+                  image: AssetImage(items.asimage),
+                  fit: BoxFit.cover,
+                  child: const InkWell(),
+                ),
+              ),
+            ),
+          )),
+          const SizedBox(height: 4),
+          // ignore: sized_box_for_whitespace
+          Container(
+            height: 50,
+            width: 200,
+            child: Column(
+              children: [
+                Text(
+                  items.title,
+                  style: const TextStyle(
+                    fontSize: 24,
+                    color: Colors.black,
+                  ),
+                ),
+              ],
+            ),
+          ),
+
+          Text(
+            items.subtitle,
+            style: const TextStyle(fontSize: 20, color: Colors.grey),
+          ),
+        ]),
+      );
+    

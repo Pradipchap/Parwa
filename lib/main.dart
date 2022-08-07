@@ -10,10 +10,12 @@ import '../ganesh.dart';
 import 'firstjatra.dart';
 import '../eid.dart';
 import 'firstshiva.dart';
+import 'pujaripara.dart';
 
 import 'package:flutter/material.dart';
 
 void main() {
+  
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
     home: const MyApp(),
@@ -46,32 +48,21 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body: Container(
-        decoration: const BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage("images/home.jpg"),
-            fit: BoxFit.cover,
-          ),
-        ),
-        alignment: Alignment.bottomCenter,
+      body: GestureDetector(
+        onTap:(){
+          Navigator.push(context, PageTwo());
+        } ,
         child: Container(
-          margin: const EdgeInsets.all(70),
-          height: 60,
-          child: ElevatedButton(
-            onPressed: () {
-              Navigator.push(context, PageTwo());
-            },
-            style: ElevatedButton.styleFrom(
-                primary: Colors.blueGrey,
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
-                textStyle:
-                    const TextStyle(fontSize: 30, fontWeight: FontWeight.bold)),
-            child: const Text('Get Started'),
+          decoration: const BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage("images/home.jpg"),
+              fit: BoxFit.cover,
+            ),
           ),
-        ),
+          alignment: Alignment.bottomCenter,
+          
       ),
-    );
+    ));
   }
 }
 
@@ -362,7 +353,7 @@ class PageTwo extends MaterialPageRoute {
                     onTap: () {
                       Navigator.push(
                         ctx,
-                        MaterialPageRoute(builder: (context) => const Events()),
+                        MaterialPageRoute(builder: (context) => const Horoscope()),
                       );
                     },
                     child: Container(
@@ -384,7 +375,7 @@ class PageTwo extends MaterialPageRoute {
                             width: 60,
                             decoration: const BoxDecoration(
                               image: DecorationImage(
-                                image: AssetImage('images/horoscope.png'),
+                                image: AssetImage('images/pandit.png'),
                                 fit: BoxFit.fill,
                               ),
                               shape: BoxShape.rectangle,
@@ -396,7 +387,7 @@ class PageTwo extends MaterialPageRoute {
                             height: 70,
                             width: 265,
                             child: const Text(
-                              'Horoscope',
+                              'Pujari Paramarsha',
                               style: TextStyle(fontSize: 30),
                             ),
                           ),

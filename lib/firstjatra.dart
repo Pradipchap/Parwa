@@ -357,6 +357,8 @@
 
 
 
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 // import 'package:flutter_map/plugin_api.dart';
 import 'package:latlong2/latlong.dart';
@@ -750,6 +752,41 @@ class Firstjatra extends StatelessWidget {
               //   ],
               // ),
             )
+            ,
+            const Divider(),
+             Container(
+
+
+              child: 
+              Container(
+                height: 60,
+                color: Colors.blue,
+                
+                
+                child: Center(child: const Text('Rato Machhindranath Jatra',style: TextStyle(fontSize: 20),)))
+              ,
+              
+              
+
+
+
+      
+
+
+
+
+             )
+             ,
+             Container(
+              
+              
+              
+
+
+             ),
+             
+
+
           ],
         ),
       ),

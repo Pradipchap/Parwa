@@ -37,6 +37,9 @@ dependencies:
   syncfusion_flutter_maps: ^20.2.40
   # google_fonts: ^2.1.0 
   flutter_osm_plugin: ^0.37.2+2
+  readmore: ^2.1.0
+  native_notify: ^0.0.16
+  hexcolor: ^2.0.7
   
 
 
@@ -84,6 +87,11 @@ flutter:
     - images/horoscope.png
     - images/resturant.png
     - images/pandit.png
+    - images/hotel1.jpg
+    - images/hotel2.jpg
+    - images/hotel3.jpeg
+    - images/veghotel.jpg
+    - images/homescreen.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
