@@ -92,6 +92,9 @@ flutter:
     - images/hotel3.jpeg
     - images/veghotel.jpg
     - images/homescreen.png
+    - images/pujari1.png
+    - images/pujari2.png
+    - images/pujari3.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

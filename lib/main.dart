@@ -1,7 +1,3 @@
-
-
-
-import './pujari.dart';
 import './calender.dart';
 import './events.dart';
 import './hotels.dart';
@@ -15,7 +11,6 @@ import 'pujaripara.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
     home: const MyApp(),
@@ -47,22 +42,21 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
-      body: GestureDetector(
-        onTap:(){
-          Navigator.push(context, PageTwo());
-        } ,
-        child: Container(
-          decoration: const BoxDecoration(
-            image: DecorationImage(
-              image: AssetImage("images/home.jpg"),
-              fit: BoxFit.cover,
+        backgroundColor: Colors.white,
+        body: GestureDetector(
+          onTap: () {
+            Navigator.push(context, PageTwo());
+          },
+          child: Container(
+            decoration: const BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage("images/home.jpg"),
+                fit: BoxFit.cover,
+              ),
             ),
+            alignment: Alignment.bottomCenter,
           ),
-          alignment: Alignment.bottomCenter,
-          
-      ),
-    ));
+        ));
   }
 }
 
@@ -115,7 +109,6 @@ class PageTwo extends MaterialPageRoute {
                   Container(
                     height: 150,
                     child: const DrawerHeader(
-                      
                       decoration: BoxDecoration(
                         color: Colors.blueGrey,
                       ),
@@ -262,7 +255,7 @@ class PageTwo extends MaterialPageRoute {
                           Container(
                             margin: const EdgeInsets.all(20),
                             height: 230,
-                            width: 60,
+                            width: 40,
                             decoration: const BoxDecoration(
                               image: DecorationImage(
                                 image: AssetImage('images/events.png'),
@@ -316,7 +309,7 @@ class PageTwo extends MaterialPageRoute {
                           Container(
                             margin: const EdgeInsets.all(20),
                             height: 200,
-                            width: 60,
+                            width: 40,
                             decoration: const BoxDecoration(
                               image: DecorationImage(
                                 image: AssetImage('images/resturant.png'),
@@ -347,21 +340,18 @@ class PageTwo extends MaterialPageRoute {
                       // ),
                     ),
                   ),
-                  
                   const Divider(),
                   GestureDetector(
                     onTap: () {
                       Navigator.push(
                         ctx,
-                        MaterialPageRoute(builder: (context) => const Horoscope()),
+                        MaterialPageRoute(builder: (context) => const Pujari()),
                       );
                     },
                     child: Container(
                       decoration: const BoxDecoration(
-                        
                         borderRadius: BorderRadius.all(Radius.circular(15)),
                       ),
-                      
 
                       // color: Colors.blueGrey[200],
 
@@ -372,7 +362,7 @@ class PageTwo extends MaterialPageRoute {
                           Container(
                             margin: const EdgeInsets.all(20),
                             height: 200,
-                            width: 60,
+                            width: 40,
                             decoration: const BoxDecoration(
                               image: DecorationImage(
                                 image: AssetImage('images/pandit.png'),
@@ -384,7 +374,7 @@ class PageTwo extends MaterialPageRoute {
                           const Divider(),
                           Container(
                             margin: const EdgeInsets.all(20),
-                            height: 70,
+                            height: 40,
                             width: 265,
                             child: const Text(
                               'Pujari Paramarsha',
